@@ -32,6 +32,9 @@
         "ghcr.io/devcontainers-contrib/features/actionlint:1": {},
         "ghcr.io/devcontainers-contrib/features/vscode-cli:1": {}
     },
-    "onCreateCommand": "./.devcontainer/on_create.sh",
-    "postStartCommand": "./.devcontainer/post_start.sh"
+    
+    "onCreateCommand": "mkdir -p /home/vscode/.config/vscode-dev-containers && chmod -R 777 /home/vscode/.config/vscode-dev-containers",
+    "postStartCommand": "touch /home/vscode/.config/vscode-dev-containers/first-run-notice-already-displayed"
 }
+
+
